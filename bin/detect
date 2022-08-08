@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+file='.web3j'
+[ ! -z $RELEASE_FILENAME ] && file=$RELEASE_FILENAME
+
+if [ -f $1/$file ]; then
+    echo "Web3Download"
+    exit 0
+else
+    exit 1
+fi
